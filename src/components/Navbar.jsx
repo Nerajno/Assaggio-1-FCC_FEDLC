@@ -11,19 +11,16 @@ const Nav = () => {
     <nav>
       <ul>
         <li>
-          <a href="#">Project</a>
+          <a href="#">Assaggio</a>
         </li>
         <li>
-          <a href="#">Link 2</a>
+          <a href="#">Twitter</a>
         </li>
         <li>
-          <a href="#">Link 3</a>
+          <a href="#">Github</a>
         </li>
         <li>
-          <a href="#">Link 4</a>
-        </li>
-        <li>
-          <a href="#">Link 5</a>
+          <a href="#">Portfolio</a>
         </li>
       </ul>
       <label htmlFor="dark-mode-toggle">
@@ -39,8 +36,7 @@ const Nav = () => {
   );
 };
 
-export default Nav;
-In this example, the component uses the useState hook to manage the state of the dark mode toggle switch. When the toggle switch is changed, the handleDarkModeToggle function is called, which updates the darkMode state. The state is then used to determine whether the toggle switch should be checked or not by using the checked prop.
+export default Navbar;
 
 
 
