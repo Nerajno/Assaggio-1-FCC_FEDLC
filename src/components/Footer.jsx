@@ -10,7 +10,7 @@ const Footer = () => {
         <a href="https://www.example2.com">Example 2</a>
       </p>
       <p>
-        Created in {currentYear}.
+        Created in 2023.
       </p>
     </footer>
   );

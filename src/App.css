@@ -4,3 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+
+.navbar, footer{
+  width: 80vw;
+  margin: auto;
+}
+
+
