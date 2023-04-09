@@ -5,6 +5,21 @@
   text-align: center;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+}
+
+#editor {
+  width: 70vw;
+  height: 40vh;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
 .navbar, footer{
   width: 80vw;
   margin: auto;

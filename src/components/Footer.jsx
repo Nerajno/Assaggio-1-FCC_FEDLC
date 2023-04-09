@@ -6,8 +6,12 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        <a href="https://www.example1.com">Example 1</a> |{' '}
-        <a href="https://www.example2.com">Example 2</a>
+        <a href="href='https://twitter.com/nerajno'
+              target='_blank'
+              rel='noopener noreferrer'"> Twitter</a> |{' '}
+        <a href='https://developindvlpr.com/'
+              target='_blank'
+              rel='noopener noreferrer'>Portfolio</a>
       </p>
       <p>
         Created in 2023.
