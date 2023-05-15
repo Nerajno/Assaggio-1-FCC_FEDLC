@@ -1,11 +1,11 @@
-import { createStore } from 'redux';
+import * as redux from 'redux';
 
 const initialState = {
- text: ''
+  text: ''
 };
 
-const  reducers = {
- text: (state, action) => {
+const reducers = {
+  text: (state, action) => {
     switch (action.type) {
       case 'UPDATE_TEXT':
         return {
@@ -29,4 +29,6 @@ const  reducers = {
   }
 };
 
-export const store = createStore(reducer, initialState);
+const store = redux.createStore(reducers, initialState);
+
+export default store;
