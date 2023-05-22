@@ -1,23 +1,41 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import MyNavbar from './components/Navbar'
 import Editor from './components/Editor'
 import Previewer from './components/Previewer'
 import Footer from './components/Footer'
 
-function App() {
+const initialState = {
+  text: ''
+};
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'UPDATE_TEXT':
+      return {
+        ...state,
+        text: action.text
+      };
+    default:
+      return state;
+  }
+};
+
+const store = createStore(reducer, initialState);
+
+function App() {
   return (
+    <Provider store={store}>
     <div className="App">
-      <h1>Markdown Previewer</h1>
-      <p className="read-the-docs">  
-        Click on the Vite and React logos to learn more
-      </p>
-        <Navbar />
+        <MyNavbar />
+        <h1>Markdown Previewer</h1>
         <Editor />
         <Previewer />
         <Footer />
     </div>
+    </Provider>
   )
 }
 
