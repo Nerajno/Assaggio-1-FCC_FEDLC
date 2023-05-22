@@ -1,7 +1,8 @@
 import * as redux from 'redux';
 
 const initialState = {
-  text: ''
+  text: '',
+  preview: ''
 };
 
 const reducers = {
@@ -29,6 +30,23 @@ const reducers = {
   }
 };
 
-const store = redux.createStore(reducers, initialState);
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'UPDATE_TEXT':
+      return {
+        ...state,
+        text: action.text
+      };
+    case 'UPDATE_PREVIEW':
+      return {
+        ...state,
+        preview: action.preview
+      };
+    default:
+      return state;
+  }
+};
+
+export const store = redux.createStore(rootReducer, initialState);
 
 export default store;
