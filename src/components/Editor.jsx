@@ -6,9 +6,10 @@ const Editor = ({disDispatch}) => {
     const [text, setText] = useState(store.getState().text);
 
     const handleChange = (e) => {
-        setText(e.target.value);
+        const value = e.target.value;
+        setText(value);
         disDispatch({type: 'UPDATE_TEXT', 
-        text: e.target.value});
+        text: value});
     }
     
     return (
