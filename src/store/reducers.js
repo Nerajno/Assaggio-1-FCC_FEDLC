@@ -5,48 +5,76 @@ const initialState = {
   preview: ''
 };
 
-const reducers = {
-  text: (state, action) => {
-    switch (action.type) {
-      case 'UPDATE_TEXT':
-        return {
-          ...state,
-          text: action.text
-        };
-      default:
-        return state;
-    }
-  },
-  preview: (state, action) => {
-    switch (action.type) {
-      case 'UPDATE_PREVIEW':
-        return {
-          ...state,
-          preview: action.preview
-        };
-      default:
-        return state;
-    }
-  }
-};
+// const reducers = {
+//   text: (state, action) => {
+//     switch (action.type) {
+//       case 'UPDATE_TEXT':
+//         return {
+//           ...state,
+//           text: action.text
+//         };
+//       default:
+//         return state;
+//     }
+//   },
+//   preview: (state, action) => {
+//     switch (action.type) {
+//       case 'UPDATE_PREVIEW':
+//         return {
+//           ...state,
+//           preview: action.preview
+//         };
+//       default:
+//         return state;
+//     }
+//   }
+// };
 
-const rootReducer = (state = initialState, action) => {
+// const rootReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case 'UPDATE_TEXT':
+//       return {
+//         ...state,
+//         text: action.text
+//       };
+//     case 'UPDATE_PREVIEW':
+//       return {
+//         ...state,
+//         preview: action.preview
+//       };
+//     default:
+//       return state;
+//   }
+// };
+
+// export const store = redux.createStore(rootReducer, initialState);
+
+// export default store;
+
+
+const textReducer = (state = initialState.text, action) => {
   switch (action.type) {
     case 'UPDATE_TEXT':
-      return {
-        ...state,
-        text: action.text
-      };
-    case 'UPDATE_PREVIEW':
-      return {
-        ...state,
-        preview: action.preview
-      };
+      return action.text;
     default:
       return state;
   }
 };
 
-export const store = redux.createStore(rootReducer, initialState);
+const previewReducer = (state = initialState.preview, action) => {
+  switch (action.type) {
+    case 'UPDATE_PREVIEW':
+      return action.preview;
+    default:
+      return state;
+  }
+};
 
-export default store;
+const rootReducer = (state = initialState, action) => {
+  return {
+    text: textReducer(state.text, action),
+    preview: previewReducer(state.preview, action)
+  };
+};
+
+export default rootReducer;
