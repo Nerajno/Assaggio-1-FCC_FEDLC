@@ -81,7 +81,6 @@
 // export default rootReducer;
 
 import * as redux from 'redux';
-import { configureStore } from '@reduxjs/toolkit'
 
 const initialState = {
   text: '',
