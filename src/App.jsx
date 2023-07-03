@@ -26,7 +26,7 @@ import Footer from './components/Footer'
 // const store = createStore(reducer, initialState);
 const App = () => {
   return (
-    <Provider store={store()}>
+    <Provider store={store}>
     <div className="App">
         <MyNavbar />
         <h1>Markdown Previewer</h1>

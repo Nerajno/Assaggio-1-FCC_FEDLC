@@ -79,8 +79,7 @@
 // };
 
 // export default rootReducer;
-
-import * as redux from 'redux';
+import { configureStore } from "@reduxjs/toolkit";
 
 const initialState = {
   text: '',
@@ -99,6 +98,7 @@ const textReducer = (state = initialState.text, action) => {
 };
 
 const previewReducer = (state = initialState.preview, action) => {
+  console.log(action, state);
   switch (action.type) {
     case 'UPDATE_PREVIEW':
       return {
@@ -110,11 +110,14 @@ const previewReducer = (state = initialState.preview, action) => {
 };
 
 const rootReducer = (state = initialState, action) => {
+  console.log(action,);
   return {
     text: textReducer(state.text, action),
     preview: previewReducer(state.preview, action)
   };
 };
 
-export default store = redux.configureStore(rootReducer, initialState);
+export default configureStore({
+  reducer: rootReducer
+});
 
