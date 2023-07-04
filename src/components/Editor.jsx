@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { store } from '../store/reducers';
+import { updateText } from '../store/text/slice';
 
 const Editor = ({disDispatch}) => {
      const dispatch = useDispatch();
-    const [text, setText] = useState('');
 
     const handleChange = (e) => {
         const newText = e.target.value;
-        setText(newText);
-        dispatch({type: 'UPDATE_TEXT', payload: newText});
+        dispatch(updateText(newText));
     }
 
     return (
