@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { selectText } from '../store/text/selectors';
 
 const Previewer = () => {
-    const text = useSelector((state) => state.text);
+    const text = useSelector(selectText);
     return (
         <div id='preview'>
             <h2>Previewer</h2>
-            <p>{state.text}</p>
+            <p>{text}</p>
         </div>
     );
 };
