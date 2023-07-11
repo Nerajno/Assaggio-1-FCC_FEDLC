@@ -5,10 +5,11 @@ import { marked } from 'marked';
 
 const Previewer = () => {
     const text = useSelector(selectText);
+    const renderedText = marked.parse(text);
     return (
         <div id='preview'>
             <h2>Previewer</h2>
-            <p>{marked.parse(text)}</p>
+            <div>{renderedText}</div>
         </div>
     );
 };
