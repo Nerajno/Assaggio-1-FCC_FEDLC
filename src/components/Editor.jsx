@@ -3,6 +3,7 @@ import { updateText } from '../store/text/slice';
 
 const Editor = ({disDispatch}) => {
      const dispatch = useDispatch();
+    //  const placeholder =
 
     const handleChange = (e) => {
         const newText = e.target.value;
