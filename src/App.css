@@ -20,8 +20,20 @@
   margin: 1rem;
 }
 
+#preview {
+  width: 70vw;
+}
+
+#previewComponent {
+  width: 70vw;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+
+}
+
 .navbar, footer{
-  width: 80vw;
+  width: 90vw;
   margin: auto;
 }
 

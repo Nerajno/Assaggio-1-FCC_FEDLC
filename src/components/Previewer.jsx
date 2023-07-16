@@ -7,7 +7,7 @@ const Previewer = () => {
     const text = useSelector(selectText);
     const renderedText = marked.parse(text);
     const previewTextRef = useRef(null);
-    
+
 
     useEffect(() => {
         if (previewTextRef.current){
@@ -16,7 +16,7 @@ const Previewer = () => {
     }, [renderedText]);
 
     return (
-        <div >
+        <div id="previewComponent" >
             <h2>Previewer</h2>
             <div ref={previewTextRef} id='preview'>{renderedText}</div>
         </div>

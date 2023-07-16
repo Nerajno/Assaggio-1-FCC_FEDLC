@@ -21,7 +21,8 @@
     "react-redux": "^8.0.5",
     "reactstrap": "^9.1.6",
     "redux": "^4.2.1",
-    "reload": "^3.2.1"
+    "reload": "^3.2.1",
+    "semver": "^7.5.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
