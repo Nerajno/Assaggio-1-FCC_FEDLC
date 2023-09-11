@@ -31,10 +31,9 @@ FreeCodeCamp's Markdown Preview. The user stories include :
    npm install npm@latest -g && npm i vite
    ```
 3. To run the app locally, run :
-```sh
-npm run dev
-```
-
+   ```sh
+   npm run dev
+   ```
 
 ### Creating Issues
 Create a new issue using github issues on the master branch of this repo.
