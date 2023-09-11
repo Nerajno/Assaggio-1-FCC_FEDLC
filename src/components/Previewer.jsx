@@ -4,6 +4,9 @@ import { selectText } from '../store/text/selectors';
 import { marked } from 'marked';
 
 const Previewer = () => {
+    marked.setOptions({
+        breaks: false,
+      });
     const text = useSelector(selectText);
     const renderedText = marked.parse(text);
     const previewTextRef = useRef(null);

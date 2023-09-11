@@ -18,10 +18,15 @@
   border-radius: 5px;
   padding: 1rem;
   margin: 1rem;
+
 }
 
 #preview {
   width: 70vw;
+}
+
+#editiorComponent{
+  padding-bottom: 5vh;
 }
 
 #previewComponent {
