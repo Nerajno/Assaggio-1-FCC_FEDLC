@@ -2,14 +2,16 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center;  this causes some unusual text issues*/
+
 }
 
-.app {
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
+  padding: 0.5em;
+  width: 100%; /*width should be set to the parent container*/
 }
 
 #editor {
@@ -17,12 +19,12 @@
   height: 40vh;
   border-radius: 5px;
   padding: 1rem;
-  margin: 1rem;
+  /* margin: 1rem; */
 
 }
 
 #preview {
-  width: 70vw;
+  width: 100%;/* set to parent container width. vw may allow overflow of the parent*/
 }
 
 #editiorComponent{
@@ -30,11 +32,8 @@
 }
 
 #previewComponent {
-  width: 70vw;
-  display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
-
+  width: 90%;
+  /* display: flex;  let default of display:block work on smaller screens*/
 }
 
 .navbar, footer{
@@ -43,3 +42,12 @@
 }
 
 
+@media (min-width:667px) {
+  #previewComponent {
+    /*Just assuming that you want the "Preview" heading next to the preview and not above on larger screens*/
+    display: flex; /*flex should occur on larger breakpoint*/
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+   
+  }
+}
