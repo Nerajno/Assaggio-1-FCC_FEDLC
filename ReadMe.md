@@ -18,7 +18,7 @@ FreeCodeCamp's Markdown Preview. The user stories include :
 
 
 ### Screenshots
-
+![Screenshot of the Current Implementation](https://github.com/Nerajno/Assaggio-1-FCC_FEDLC/blob/main/resources_planning/Screenshot%202023-09-10%20at%2010.46.09%20PM.png)
 
 ### Local Installation
 
