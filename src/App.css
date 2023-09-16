@@ -31,10 +31,9 @@
 
 #previewComponent {
   width: 70vw;
-  display: flex;
+  display: inline-block;
   justify-content: center; /* Horizontal centering */
   align-items: center; /* Vertical centering */
-
 }
 
 .navbar, footer{
